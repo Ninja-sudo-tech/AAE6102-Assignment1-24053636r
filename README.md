@@ -71,6 +71,21 @@ Using pseudorange measurements from tracking, implement the Weighted Least Squar
 Plot the user position and velocity.
 Compare the results with the ground truth.
 Discuss the impact of multipath effects on the WLS solution.**
+
+In open-sky conditions, the positioning results from different satellites are very close to each other and also closely match the ground truth. This suggests that the signals are largely free from interference, and the Weighted Least Squares solution provides accurate positioning with minimal error.
+
+However, in urban conditions, the positioning results from different satellites show significant discrepancies for the same location. This deviation from the ground truth indicates that urban interference, particularly multipath effects, is impacting the accuracy of the WLS solution.
+
+**For the multipath effects on the WLS solution:**
+
+Satellite-Specific Positioning Variability: In urban environments, multipath causes some satellite signals to be delayed or distorted, leading to inconsistent position estimates from different satellites. Since WLS assigns weights based on signal quality, erroneous measurements from multipath-contaminated signals can degrade the overall solution.
+
+Bias in Estimated Position: If multipath-affected measurements are not properly mitigated, they introduce systematic errors in the WLS estimation, causing the final position to deviate from the actual ground truth.
+
+Solution Instability: The large variations in satellite-derived positions result in higher residuals in WLS, potentially reducing the robustness of the solution and increasing positioning uncertainty.
+
+Error Amplification in Urban Areas: As multipath effects are more severe in dense urban environments, they introduce significant biases in range measurements, making WLS solutions much less reliable compared to open-sky conditions.
+
 <img width="1549" alt="urban_position" src="https://github.com/user-attachments/assets/d2bb48c5-ea83-4bb6-b969-d12210a57252" />
 <img width="1280" alt="Opensky_Position" src="https://github.com/user-attachments/assets/e4ab2616-b5ea-4456-89c9-f006a0466cc6" />
 
@@ -78,3 +93,4 @@ Discuss the impact of multipath effects on the WLS solution.**
 **Task 5 – Kalman Filter-Based Positioning
 Develop an Extended Kalman Filter (EKF) using pseudorange and Doppler measurements to estimate user position and velocity.**
 
+By the time submitting this assignment I was still debugging the algorithm for Kalman Filter-based Positioning. The code are in the repository，it hasn't generate ideal results yet. 
