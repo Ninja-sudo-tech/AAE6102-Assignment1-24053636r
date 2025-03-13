@@ -66,17 +66,13 @@ The ephemeris data are as follows(for the original file, please refer to ):
 
 <img width="464" alt="3" src="https://github.com/user-attachments/assets/c10c0026-22eb-4c1c-96a8-abb43f9c5384" />
 
-
-
-
-
-
-
 **Task 4 – Position and Velocity Estimation
 Using pseudorange measurements from tracking, implement the Weighted Least Squares (WLS) algorithm to compute the user's position and velocity.
 Plot the user position and velocity.
 Compare the results with the ground truth.
 Discuss the impact of multipath effects on the WLS solution.**
+<img width="1549" alt="urban_position" src="https://github.com/user-attachments/assets/d2bb48c5-ea83-4bb6-b969-d12210a57252" />
+<img width="1280" alt="Opensky_Position" src="https://github.com/user-attachments/assets/e4ab2616-b5ea-4456-89c9-f006a0466cc6" />
 
 
 **Task 5 – Kalman Filter-Based Positioning
